@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Планувальник Завдань</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .task-form, .task-list {
+            margin-bottom: 20px;
+        }
+        .task-list {
+            border-top: 2px solid #333;
+            padding-top: 10px;
+        }
+        .task-item {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Планувальник Завдань</h1>
+    <div class="task-form">
+        <h2>Додати нове завдання</h2>
+        <form id="taskForm">
+            <label>
+                Назва завдання: 
+                <input type="text" id="title" required>
+            </label><br>
+            <label>
+                Дата завершення: 
+                <input type="date" id="dueDate" required>
+            </label><br>
+            <label>
+                Пріоритет:
+                <select id="priority">
+                    <option value="None">Немає</option>
+                    <option value="Low">Низький</option>
+                    <option value="Medium">Середній</option>
+                    <option value="High">Високий</option>
+                    <option value="Urgent">Терміновий</option>
+                </select>
+            </label><br>
+            <button type="submit">Додати завдання</button>
+        </form>
+    </div>
+    <div class="task-list">
+        <h2>Список завдань</h2>
+        <button id="sortTasks">Сортувати завдання</button>
+        <div id="tasks"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
